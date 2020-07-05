@@ -1,9 +1,9 @@
 import React from 'react';
 
-// import { Container } from './styles';
+import { Container } from './styles';
 
 const Header = () => (
-  <header>
+  <Container>
     <h1>me.</h1>
     <nav>
       <ul>
@@ -12,7 +12,7 @@ const Header = () => (
         <li><a href="/">Sobre</a></li>
       </ul>
     </nav>
-  </header>
+  </Container>
 )
 
 
