@@ -1,17 +1,22 @@
 import React from 'react';
 
-import { Container } from './styles';
+import { Container, Title, Menu, LinkPage } from './styles';
 
 const Header = () => (
   <Container>
-    <h1>me.</h1>
-    <nav>
-      <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/projects">Projetos</a></li>
-        <li><a href="/">Sobre</a></li>
-      </ul>
-    </nav>
+    <div>
+      <Title>me.</Title>
+
+      <Menu>
+        <ul>
+          <li><LinkPage to="/">Home</LinkPage></li>
+          <li><LinkPage to="/projects">Projetos</LinkPage></li>
+          {/* <li><LinkPage to="/">Sobre</LinkPage></li> */}
+        </ul>
+      </Menu>
+    </div>
+
+    <h2>Switch Button</h2>
   </Container>
 )
 

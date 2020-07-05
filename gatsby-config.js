@@ -36,6 +36,21 @@ module.exports = {
         ignore: [`**/styles.js`],
       },
     },
+    {
+      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      options: {
+        fonts: [
+          {
+            family: `Roboto`,
+            variants: [`300`, `500`, `700`],
+          },
+          {
+            family: `Ubuntu`,
+            variants: [`300`, `500`, `700`],
+          },
+        ],
+      },
+    },
     // `gatsby-plugin-offline`,
   ],
 }

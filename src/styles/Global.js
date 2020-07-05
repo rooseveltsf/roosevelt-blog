@@ -53,9 +53,11 @@ const GlobalStyles = createGlobalStyle`
   }
   body {
     background: #F7F7F7;
+    color: #3B3B3B;
+    /* color: #575656; */
     line-height: 1;
     font-size: 100%;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-family: ubuntu;
   }
   img {
     display: block;
