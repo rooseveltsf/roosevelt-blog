@@ -1,5 +1,6 @@
 import React from 'react';
 
+import SwitchButton from "../SwitchButton";
 import { Container, Title, Menu, LinkPage } from './styles';
 
 const Header = () => (
@@ -16,7 +17,7 @@ const Header = () => (
       </Menu>
     </div>
 
-    <h2>Switch Button</h2>
+    <SwitchButton />
   </Container>
 )
 

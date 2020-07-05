@@ -12,12 +12,16 @@ export const Container = styled.header`
 
   padding: 32px;
 
-  div {
+  &:first-child {
     /* background: red; */
     display: flex;
     flex-direction: column;
     flex: 1;
   }
+
+  /* div {
+
+  } */
 `;
 
 export const Title = styled.h1`
