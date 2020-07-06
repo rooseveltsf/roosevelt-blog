@@ -19,9 +19,6 @@ export const Container = styled.header`
     flex: 1;
   }
 
-  /* div {
-
-  } */
 `;
 
 export const Title = styled.h1`

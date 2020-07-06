@@ -1,16 +1,23 @@
 import React from "react"
 import PropTypes from "prop-types"
 
-import { Container, Main } from "./styles";
+import { Container, Main, ContainerHeader } from "./styles";
 
 import Header from '../Header'
+import Menu from '../Menu';
+import SEO from '../seo'
 import GlobalStyles from '../../styles/Global';
 
-const Layout = ({ children }) => (
+const Layout = ({ children, title }) => (
   <Container>
-    <Header />
-    <Main>{children}</Main>
+    <SEO title={title} />
     <GlobalStyles />
+
+    <Header />
+
+    <Main>{children}</Main>
+
+    <Menu />
   </Container>
 );
 
