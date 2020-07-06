@@ -1,11 +1,22 @@
 import React from "react"
-import { StaticQuery, graphql } from "gatsby";
 
 import Layout from "../components/Layout"
+import { ContainerTitle, Line, ContainerData, LineMid } from "./styles";
 
 const IndexPage = () => (
   <Layout title="Home">
-    <h1>Meu portfólio</h1>
+    <ContainerTitle>
+      <Line />
+      <h2>Meu<br/>
+        portfólio</h2>
+    </ContainerTitle>
+    <ContainerData>
+      <div>
+        <h3>Roosevelt de Souza</h3>
+        <p>Desenvolvedor full-stack</p>
+      </div>
+      <LineMid />
+    </ContainerData>
   </Layout>
 )
 
