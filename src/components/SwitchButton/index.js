@@ -23,8 +23,8 @@ const SwitchButton = ({ check, on }) => (
         <MdWbSunny color="#f7f7f7" size={20} />
       </div>
     }
-    checked={check}
-    onChange={on}
+    checked={false}
+    onChange={() => {}}
   />
 )
 

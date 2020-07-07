@@ -5,7 +5,7 @@ const Line = styled.div`
   height: 100%;
   background: ${({ color }) => color ? color : '#333'};
   margin: 0 16px;
-  border-radius: 2px;
+  /* border-radius: 2px; */
 `;
 
 export default Line;
