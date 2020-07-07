@@ -1,16 +1,16 @@
 import styled from 'styled-components';
 import { Link } from "gatsby";
 
-export const Container = styled.header`
-  width: 190px;
+export const Container = styled.aside`
+  width: 13rem;
+  height: 100vh;
   background: #EEEEEE;
-
-
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-
   padding: 32px;
+  border-right: 2px solid #D1CCCC;
+  position: fixed;
 
   &:first-child {
     /* background: red; */

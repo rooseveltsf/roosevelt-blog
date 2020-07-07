@@ -1,11 +1,15 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  width: 100px;
+  width: 5rem;
+  height: 100vh;
+  position: fixed;
+  right: 0;
 
   display: flex;
   align-items: center;
   justify-content: center;
+  border-left: 2px solid #D1CCCC;
 
   ul {
     list-style: none;

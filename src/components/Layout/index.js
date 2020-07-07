@@ -5,6 +5,7 @@ import { Container, Main, ContainerHeader } from "./styles";
 
 import Header from '../Header'
 import Menu from '../Menu';
+
 import SEO from '../seo'
 import GlobalStyles from '../../styles/Global';
 
