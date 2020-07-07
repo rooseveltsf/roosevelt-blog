@@ -48,10 +48,15 @@ const GlobalStyles = createGlobalStyle`
     border-collapse: collapse;
     border-spacing: 0;
   }
+
   * {
     box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
   }
+  html {
+    overflow-y: scroll;
+  }
+
   body {
     background: #F7F7F7;
     color: #3B3B3B;
@@ -64,6 +69,40 @@ const GlobalStyles = createGlobalStyle`
     display: block;
   	width: 100%;
   	height: auto;
+  }
+
+  ::-webkit-scrollbar {
+    width: 8px;
+    background: #eee;
+  }
+
+  ::-webkit-scrollbar:hover {
+    background-color: rgba(0, 0, 0, 0.18);
+  }
+
+  ::-webkit-scrollbar-thumb:vertical {
+    background: rgba(0, 0, 0, 0.5);
+  }
+
+  ::-webkit-scrollbar-thumb:vertical:active {
+    background: rgba(0, 0, 0, 0.61);
+  }
+
+  pre::-webkit-scrollbar {
+    height: 8px;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  pre::-webkit-scrollbar:hover {
+    background-color: rgba(0, 0, 0, 0.09);
+  }
+
+  pre::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.5);
+  }
+
+  pre::-webkit-scrollbar-thumb:active {
+    background: rgba(0, 0, 0, 0.5);
   }
 `
 

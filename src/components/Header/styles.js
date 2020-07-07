@@ -9,7 +9,7 @@ export const Container = styled.aside`
   flex-direction: column;
   justify-content: space-between;
   padding: 32px;
-  border-right: 2px solid #D1CCCC;
+  border-right: 1px solid #D1CCCC;
   position: fixed;
 
   &:first-child {

@@ -15,20 +15,14 @@ export const ContainerTitle = styled.div`
   align-items: center;
   margin-bottom: 54px;
   height: 18rem;
+  word-break: break-word;
 
   h2 {
-    font-size: 9.5em;
-    /* font-size: 132px; */
+    font-size: 9rem;
+    /* overflow-wrap: break-word; */
+    
     text-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
   }
-`;
-
-export const Line = styled.div`
-  width: 8px;
-  height: 100%;
-  background: ${({ color }) => color ? color : '#7159c1'};
-  margin: 0 16px;
-  border-radius: 2px;
 `;
 
 export const ContainerData = styled.div`

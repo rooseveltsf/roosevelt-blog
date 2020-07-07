@@ -1,10 +1,12 @@
 import React from 'react';
+// import { FiList, FiGrid, FiArrowUp, FiSearch } from "react-icons/fi";
 
 import { Container } from './styles';
 
 const Menu = () => {
   return (
     <Container>
+      {/* <FiSearch size={32} /> */}
       <ul>
         <li>
           <a href="/">Github</a>
@@ -16,6 +18,8 @@ const Menu = () => {
           <a href="/">Instagram</a>
         </li>
       </ul>
+
+      {/* <FiArrowUp size={32} /> */}
     </Container>
   )
 }
