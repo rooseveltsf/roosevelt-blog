@@ -1,25 +1,18 @@
 import React from 'react';
-// import { FiList, FiGrid, FiArrowUp, FiSearch } from "react-icons/fi";
+import Links from './links';
 
 import { Container } from './styles';
 
 const Menu = () => {
   return (
     <Container>
-      {/* <FiSearch size={32} /> */}
       <ul>
-        <li>
-          <a href="/">Github</a>
-        </li>
-        <li>
-          <a href="/">Linkedin</a>
-        </li>
-        <li>
-          <a href="/">Instagram</a>
-        </li>
+        {Links.map(link => (
+          <li key={link.name}>
+            <a href={link.link} target="_blank" >{link.name}</a>
+          </li>
+        ))}
       </ul>
-
-      {/* <FiArrowUp size={32} /> */}
     </Container>
   )
 }

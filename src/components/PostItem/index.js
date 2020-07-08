@@ -6,17 +6,19 @@ import {
   Container,
   PostItemTag,
   PostItemInfo,
+  PostItemDate,
   PostItemTitle,
   PostItemDescription
 } from './styles';
 
-const PostItem = ({ url, tag, title, description, color}) => {
+const PostItem = ({ slug, tag, date, timeToRead, title, description, color}) => {
   return (
-    <PostItemLink to={`/${url}`}>
+    <PostItemLink to={slug}>
       <Container>
         <PostItemTag color={color}>{tag}</PostItemTag>
 
         <PostItemInfo>
+          <PostItemDate>{date} - {timeToRead} minutos de leitura</PostItemDate>
           <PostItemTitle>{title}</PostItemTitle>
           <PostItemDescription>{description}</PostItemDescription>
         </PostItemInfo>
@@ -26,8 +28,10 @@ const PostItem = ({ url, tag, title, description, color}) => {
 }
 
 PostItem.propTypes = {
-  url: PropsTypes.string.isRequired,
+  slug: PropsTypes.string.isRequired,
   tag: PropsTypes.string.isRequired,
+  date: PropsTypes.string.isRequired,
+  timeToRead: PropsTypes.string.isRequired,
   title: PropsTypes.string.isRequired,
   description: PropsTypes.string.isRequired,
   color: PropsTypes.string

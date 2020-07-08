@@ -7,7 +7,8 @@ export const PostItemLink = styled(Link)`
   cursor: pointer;
 
   &:hover {
-    color: #FBB03B;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.16);
+    background: #D1CCCC;
   }
 `;
 
@@ -39,7 +40,13 @@ export const PostItemInfo = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  align-items: flex-start;
   margin-left: 1.5rem;
+`;
+
+export const PostItemDate = styled.p`
+  font-size: 0.8rem;
+  color: #575656;
 `;
 
 export const PostItemTitle = styled.h2`
