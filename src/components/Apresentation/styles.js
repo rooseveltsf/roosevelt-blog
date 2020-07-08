@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 
-export const Apresentation = styled.div`
-  height: 80px;
+export const Container = styled.div`
+  height: 5rem;
+  width: 28rem;
   margin: 70px 0;
 
   display: flex;
@@ -22,5 +23,3 @@ export const Apresentation = styled.div`
     }
   }
 `;
-
-export const ListPost = styled.ul``

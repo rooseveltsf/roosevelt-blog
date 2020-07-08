@@ -1,9 +1,9 @@
 ---
 date: 2020-07-07 17:01:30
-title: DevRadar
-description: Aqui está a descrição do DevRadar.
-tag: DV
-background: '#FB3B3B'
+title: Discord Clone
+description: Aqui está a descrição do Discord Clone.
+tag: DC
+background: '#7159c1'
 ---
 
 # Lorem ipsum

@@ -9,7 +9,7 @@ const Menu = () => {
       <ul>
         {Links.map(link => (
           <li key={link.name}>
-            <a href={link.link} target="_blank" >{link.name}</a>
+            <a href={link.link} rel="noreferrer" target="_blank" >{link.name}</a>
           </li>
         ))}
       </ul>

@@ -31,7 +31,7 @@ PostItem.propTypes = {
   slug: PropsTypes.string.isRequired,
   tag: PropsTypes.string.isRequired,
   date: PropsTypes.string.isRequired,
-  timeToRead: PropsTypes.string.isRequired,
+  timeToRead: PropsTypes.number.isRequired,
   title: PropsTypes.string.isRequired,
   description: PropsTypes.string.isRequired,
   color: PropsTypes.string
