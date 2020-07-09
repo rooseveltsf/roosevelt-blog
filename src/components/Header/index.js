@@ -11,8 +11,8 @@ const Header = () => (
       <Menu>
         <ul>
           <li><LinkPage to="/">Home</LinkPage></li>
-          <li><LinkPage to="/projects">Projetos</LinkPage></li>
-          {/* <li><LinkPage to="/">Sobre</LinkPage></li> */}
+          <li><LinkPage to="/projects/">Projetos</LinkPage></li>
+          <li><LinkPage to="/about">Sobre</LinkPage></li>
         </ul>
       </Menu>
     </div>
