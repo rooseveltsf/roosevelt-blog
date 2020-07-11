@@ -8,7 +8,7 @@ export const PostItemLink = styled(Link)`
 
   &:hover {
     box-shadow: 0 1px 6px rgba(0, 0, 0, 0.16);
-    background: #D1CCCC;
+    /* background: #dedede; */
   }
 `;
 
@@ -19,6 +19,7 @@ export const Container = styled.section`
   /* border-bottom: 1px solid #D1CCCC; */
   width: 100%;
   padding: 2rem 3rem;
+  font-family: Roboto;
 `;
 
 export const PostItemTag = styled.div`

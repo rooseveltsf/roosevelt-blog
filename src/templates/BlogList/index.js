@@ -21,6 +21,7 @@ const BlogPage = props => {
   return (
     <Layout title='Projetos'>
       <Apresentation
+        left
         color={data.color}
         description={data.description}
         title={data.title}

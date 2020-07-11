@@ -7,11 +7,11 @@ import { Container } from './styles';
 function Pagination({ isFirst, isLast, currentPage, numPages, prevPage, nextPage }) {
   return (
     <Container>
-      {!isFirst && <Link to={prevPage}>Página anterior</Link>}
+      {!isFirst && <Link to={prevPage}>← Página anterior</Link>}
       
       <p>{currentPage} de {numPages}</p>
 
-      {!isLast && <Link to={nextPage}>Página anterior</Link>}
+      {!isLast && <Link to={nextPage}> Página anterior →</Link>}
     </Container>
   )
 }

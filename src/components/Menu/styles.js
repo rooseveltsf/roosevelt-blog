@@ -10,7 +10,7 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border-left: 1px solid #D1CCCC;
+  border-left: 1px solid #DEDEDE;
   background: #eee;
 
   ul {

@@ -18,7 +18,7 @@ const PostItem = ({ slug, tag, date, timeToRead, title, description, color}) => 
         <PostItemTag color={color}>{tag}</PostItemTag>
 
         <PostItemInfo>
-          <PostItemDate>{date} - {timeToRead} minutos de leitura</PostItemDate>
+          <PostItemDate>{date} • ⏱ {timeToRead} minutos de leitura</PostItemDate>
           <PostItemTitle>{title}</PostItemTitle>
           <PostItemDescription>{description}</PostItemDescription>
         </PostItemInfo>

@@ -39,9 +39,16 @@ export const ContainerData = styled.div`
     flex-direction: column;
     justify-content: space-around;
 
-    h3, p {
+    h3 {
       font-size: 24px;
       text-align: right;
+    }
+
+    p {
+      font-family: Roboto;
+      text-align: right;
+      font-size: 16px;
+      color: #575656;
     }
   }
 

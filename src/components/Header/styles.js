@@ -9,7 +9,7 @@ export const Container = styled.aside`
   flex-direction: column;
   justify-content: space-between;
   padding: 32px;
-  border-right: 1px solid #D1CCCC;
+  border-right: 1px solid #DEDEDE;
   position: fixed;
 
   &:first-child {
@@ -24,6 +24,7 @@ export const Container = styled.aside`
 export const Title = styled.h1`
   font-size: 64px;
   margin-bottom: 100px;
+  font-family: Ubuntu;
 `
 
 export const Menu = styled.nav`
@@ -47,4 +48,5 @@ export const LinkPage = styled(Link).attrs({
   text-decoration: none;
   font-size: 16px;
   color: #707070;
+  font-family: Roboto;
 `;
