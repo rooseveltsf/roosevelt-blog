@@ -1,14 +1,14 @@
 import styled from "styled-components"
 
 export const PostHeader = styled.header`
-  color: #3B3B3B;
+  color: var(--title);
   padding: 5rem 2rem 0;
 `
 export const PostHeaderBorder = styled.div`
   background: ${({ color }) =>
     color ?
-      `linear-gradient(to right, ${color}, #F7F7F7)` :
-      'linear-gradient(to right, #333, #F7F7F7)'};
+      `linear-gradient(to right, ${color}, var(--background))` :
+      'linear-gradient(to right, #333, var(--background))'};
   height: 2px;
   width: 100%;
   margin: 8px 0 32px 0;
@@ -25,18 +25,18 @@ export const PostDescription = styled.h2`
   font-size: 1.8rem;
   font-weight: 300;
   /* padding: 0 1.4rem; */
-  color: #575656;
+  color: var(--text);
 `
 
 export const PostDate = styled.p`
   font-size: 1.1rem;
   font-weight: 300;
   /* padding: 0 1.4rem; */
-  color: #707070;
+  color: var(--textDescription);
 `
 
 export const MainContent = styled.section`
-  color: #333;
+  color: var(--text);
   margin: auto;
   max-width: 70rem;
   margin: 8px 0 32px 0;
@@ -52,7 +52,7 @@ export const MainContent = styled.section`
   .tags,
   iframe,
   .button-post {
-    color: #575656;
+    color: var(--text);
     font-size: 1.25rem;
     /* font-weight: 300; */
     line-height: 1.7;
@@ -69,7 +69,6 @@ export const MainContent = styled.section`
   h4,
   h5 {
     margin: 2.4rem auto 1rem;
-    /* color: #575656; */
   }
   ul,
   ol {

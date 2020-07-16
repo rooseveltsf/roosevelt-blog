@@ -8,15 +8,13 @@ export const PostItemLink = styled(Link)`
 
   &:hover {
     box-shadow: 0 1px 6px rgba(0, 0, 0, 0.16);
-    /* background: #dedede; */
   }
 `;
 
 export const Container = styled.section`
   display: flex;
   align-items: center;
-  border-top: 1px solid #D1CCCC;
-  /* border-bottom: 1px solid #D1CCCC; */
+  border-bottom: 1px solid var(--border);
   width: 100%;
   padding: 2rem 3rem;
   font-family: Roboto;
@@ -47,20 +45,20 @@ export const PostItemInfo = styled.div`
 
 export const PostItemDate = styled.p`
   font-size: 0.8rem;
-  color: #575656;
+  color: var(--text);
 `;
 
 export const PostItemTitle = styled.h2`
   font-size: 1.6rem;
   font-weight: bold;
   margin: 0.2rem 0 0.5rem;
-  color: #3B3B3B;
+  color: var(--title);
 `;
 
 export const PostItemDescription = styled.p`
   font-size: 1.2rem;
   font-weight: 400;
   line-height: 1.2;
-  color: #575656;
+  color: var(--text);
 `;
 

@@ -5,13 +5,13 @@ export const Container = styled.section`
   align-items: center;
   justify-content: space-between;
   padding: 1.5rem 1.3rem;
-  border-top: 1px solid #D1CCCC;
-  color: #575656;
+  border-top: 1px solid var(--border);
+  color: var(--text);
 
   a {
-    color: #575656;
+    color: var(--text);
     text-decoration: none;
-    transition: color 0.5s;
+    transition: color 0.3s;
     cursor: pointer;
 
     &:hover {

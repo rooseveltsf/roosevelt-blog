@@ -8,7 +8,6 @@ export const Container = styled.section`
 export const Main = styled.main`
   min-height: 100vh;
   width: 100%;
-  background: #F7F7F7;
   padding: 0 4rem 0 13rem;
 
   display: flex;

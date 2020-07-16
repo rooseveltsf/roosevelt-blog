@@ -3,6 +3,7 @@ import { graphql } from 'gatsby';
 
 import Layout from '../../components/Layout';
 import data from './dataPageProjects';
+import { Header, Line } from './styles';
 
 import Apresentation from "../../components/Apresentation";
 import PostItem from '../../components/PostItem';
@@ -20,12 +21,11 @@ const BlogPage = props => {
 
   return (
     <Layout title='Projetos'>
-      <Apresentation
-        left
-        color={data.color}
-        description={data.description}
-        title={data.title}
-      />
+      <Header>
+        <h2>Projetos</h2>
+        <p>Segue a lista de alguns projetos idealizado por mim, com detalhes sobre eles.</p>
+        <Line />
+      </Header>
       {edges.map(post => (
         <PostItem
           key={post.node.frontmatter.title}

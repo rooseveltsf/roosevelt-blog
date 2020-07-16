@@ -57,10 +57,39 @@ const GlobalStyles = createGlobalStyle`
     overflow-y: scroll;
   }
 
+  body.dark {
+    --title: #3B3B3B;
+    --text: #575656;
+    
+    --textLink: #707070;
+
+    --textDescription: #707070;
+
+    --border: #D1CCCC;
+    --background: #f7f7f7;
+
+    --backgroundHeader: #eee;
+    --borderHeader: #DEDEDE;
+  }
+
   body {
-    background: #F7F7F7;
-    color: #3B3B3B;
-    /* color: #575656; */
+    --title: #f7f7f7;
+    --text: #D1CCCC;
+    
+    --textLink: #eee;
+
+    --textDescription: #eee;
+
+    --border: #383d45;
+    --background: #222831;
+
+    --backgroundHeader: #1b2027;
+    --borderHeader: #383d45;
+  }
+
+  body {
+    background: var(--background);
+    color: var(--text);
     line-height: 1;
     font-size: 100%;
     font-family: Roboto;
@@ -73,7 +102,7 @@ const GlobalStyles = createGlobalStyle`
 
   ::-webkit-scrollbar {
     width: 8px;
-    background: #eee;
+    background: var(--backgroundHeader);
   }
 
   ::-webkit-scrollbar:hover {

@@ -19,7 +19,7 @@ export const ContainerTitle = styled.div`
 
   h2 {
     font-size: 9rem;
-    /* overflow-wrap: break-word; */
+    color: var(--title);
     
     text-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
   }
@@ -48,7 +48,7 @@ export const ContainerData = styled.div`
       font-family: Roboto;
       text-align: right;
       font-size: 16px;
-      color: #575656;
+      color: var(--text);
     }
   }
 

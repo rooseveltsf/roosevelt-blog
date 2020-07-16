@@ -10,8 +10,8 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border-left: 1px solid #DEDEDE;
-  background: #eee;
+  border-left: 1px solid var(--borderHeader);
+  background: var(--backgroundHeader);
 
   ul {
     list-style: none;
@@ -24,7 +24,7 @@ export const Container = styled.div`
  
       a {
         text-decoration: none;
-        color: #707070;
+        color: var(--textLink);
         font-size: 16px;
       }
     }

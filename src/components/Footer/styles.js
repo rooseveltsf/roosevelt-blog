@@ -1,8 +1,7 @@
 import styled from 'styled-components';
 
 export const Container = styled.footer`
-  /* background: red; */
-  height: 3rem;
+  height: 5rem;
 
   display: flex;
   align-items: center;
@@ -10,7 +9,7 @@ export const Container = styled.footer`
 
   p {
     font-size: 16px;
-    color: #575656;
+    color: var(--text);
 
     span {
       font-weight: bold;
