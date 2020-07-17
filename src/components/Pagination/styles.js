@@ -11,11 +11,11 @@ export const Container = styled.section`
   a {
     color: var(--text);
     text-decoration: none;
-    transition: color 0.3s;
+    transition: color 0.2s;
     cursor: pointer;
 
     &:hover {
-      color: tomato;
+      color: #F2A365;
     }
   }
 `;

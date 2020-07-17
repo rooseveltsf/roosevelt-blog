@@ -3,7 +3,7 @@ import React from 'react';
 import SwitchButton from "../SwitchButton";
 import { Container, Title, Menu, LinkPage } from './styles';
 
-const Header = () => (
+const Header = ({ dark, onClick }) => (
   <Container>
     <div>
       <Title>me.</Title>
@@ -17,7 +17,7 @@ const Header = () => (
       </Menu>
     </div>
 
-    <SwitchButton />
+    <SwitchButton dark={dark} onClick={onClick} />
   </Container>
 )
 

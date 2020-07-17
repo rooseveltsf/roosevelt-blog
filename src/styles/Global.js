@@ -57,7 +57,23 @@ const GlobalStyles = createGlobalStyle`
     overflow-y: scroll;
   }
 
-  body.dark {
+  body{
+    --title:${({ dark }) => dark ? '#f7f7f7' : '#3B3B3B'} ;
+    --text: ${({ dark }) => dark ? '#D1CCCC' : '#575656'};
+    
+    --textLink: ${({ dark }) => dark ? '#eee' : '#707070'};
+    /* ${({ dark }) => dark ? '' : ''}; */
+
+    --textDescription: ${({ dark }) => dark ? '#eee' : '#707070'};
+
+    --border: ${({ dark }) => dark ? '#383d45' : '#D1CCCC'};
+    --background: ${({ dark }) => dark ? '#1b2027' : '#f7f7f7' };
+
+    --backgroundHeader: ${({ dark }) => dark ? '#222831' : '#eee'};
+    --borderHeader: ${({ dark }) => dark ? '#383d45' : '#DEDEDE'};
+  }
+
+  /* body.light {
     --title: #3B3B3B;
     --text: #575656;
     
@@ -70,22 +86,7 @@ const GlobalStyles = createGlobalStyle`
 
     --backgroundHeader: #eee;
     --borderHeader: #DEDEDE;
-  }
-
-  body {
-    --title: #f7f7f7;
-    --text: #D1CCCC;
-    
-    --textLink: #eee;
-
-    --textDescription: #eee;
-
-    --border: #383d45;
-    --background: #222831;
-
-    --backgroundHeader: #1b2027;
-    --borderHeader: #383d45;
-  }
+  } */
 
   body {
     background: var(--background);
@@ -94,6 +95,7 @@ const GlobalStyles = createGlobalStyle`
     font-size: 100%;
     font-family: Roboto;
   }
+
   img {
     display: block;
   	width: 100%;

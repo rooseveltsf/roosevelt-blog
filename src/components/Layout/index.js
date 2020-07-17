@@ -1,7 +1,9 @@
-import React from "react"
+import React, { useState, useContext } from "react"
 import PropTypes from "prop-types"
 
 import { Container, Main } from "./styles";
+
+import { StateContext } from '../../context/StateContext';
 
 import Header from '../Header'
 import Menu from '../Menu';
@@ -9,18 +11,23 @@ import Menu from '../Menu';
 import SEO from '../seo'
 import GlobalStyles from '../../styles/Global';
 
-const Layout = ({ children, title }) => (
-  <Container>
-    <SEO title={title} />
-    <GlobalStyles />
+const Layout = ({ children, title }) => {
+  // const[dark, setDark] = useState(false);
+  const { dark } = useContext(StateContext);
 
-    <Header />
+  return (
+    <Container>
+      <SEO title={title} />
+      <GlobalStyles dark={dark} />
 
-    <Main>{children}</Main>
+      <Header />
 
-    <Menu />
-  </Container>
-);
+      <Main>{children}</Main>
+
+      <Menu />
+    </Container>
+  );
+}
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
