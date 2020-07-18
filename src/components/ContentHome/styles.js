@@ -1,13 +1,15 @@
 import styled from 'styled-components';
+import media from 'styled-media-query';
 
 export const Container = styled.div`
-  /* background: tomato; */
   padding: 32px;
   flex: 1;
 
   display: flex;
   flex-direction: column;
   justify-content: center;
+
+  transition: background 0.5s;
 `;
 
 export const ContainerTitle = styled.div`
@@ -23,6 +25,14 @@ export const ContainerTitle = styled.div`
     
     text-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
   }
+
+  ${media.lessThan('medium')`
+    height: 10rem;
+
+    h2 {
+      font-size: 5rem;
+    }
+  `}
 `;
 
 export const ContainerData = styled.div`

@@ -2,10 +2,8 @@ import React from 'react';
 import { graphql } from 'gatsby';
 
 import Layout from '../../components/Layout';
-import data from './dataPageProjects';
 import { Header, Line } from './styles';
 
-import Apresentation from "../../components/Apresentation";
 import PostItem from '../../components/PostItem';
 import Pagination from '../../components/Pagination';
 

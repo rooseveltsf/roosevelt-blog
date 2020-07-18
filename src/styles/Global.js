@@ -1,4 +1,5 @@
 import { createGlobalStyle } from "styled-components";
+import media from 'styled-media-query';
 
 const GlobalStyles = createGlobalStyle`
   /* http://meyerweb.com/eric/tools/css/reset/
@@ -94,6 +95,7 @@ const GlobalStyles = createGlobalStyle`
     line-height: 1;
     font-size: 100%;
     font-family: Roboto;
+    transition: all 0.5s;
   }
 
   img {
@@ -105,6 +107,10 @@ const GlobalStyles = createGlobalStyle`
   ::-webkit-scrollbar {
     width: 8px;
     background: var(--backgroundHeader);
+
+    ${media.lessThan('medium')`
+      background: transparent;
+    `}
   }
 
   ::-webkit-scrollbar:hover {

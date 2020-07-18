@@ -1,4 +1,5 @@
-import React, { useState, useContext } from "react"
+import React, { useContext } from "react"
+import { TransitionPortal } from 'gatsby-plugin-transition-link'
 import PropTypes from "prop-types"
 
 import { Container, Main } from "./styles";
@@ -12,7 +13,6 @@ import SEO from '../seo'
 import GlobalStyles from '../../styles/Global';
 
 const Layout = ({ children, title }) => {
-  // const[dark, setDark] = useState(false);
   const { dark } = useContext(StateContext);
 
   return (
@@ -20,11 +20,15 @@ const Layout = ({ children, title }) => {
       <SEO title={title} />
       <GlobalStyles dark={dark} />
 
-      <Header />
+      <TransitionPortal level="top">
+        <Header dark={dark} />
+      </TransitionPortal>
 
       <Main>{children}</Main>
 
-      <Menu />
+      <TransitionPortal level="top">
+        <Menu />
+      </TransitionPortal>
     </Container>
   );
 }

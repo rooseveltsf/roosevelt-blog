@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react"
+import React, { useContext } from "react"
 import Switch from "react-switch"
 import { MdBrightness3, MdWbSunny } from "react-icons/md"
 
@@ -12,24 +12,8 @@ const styleSwitch = {
 }
 
 const SwitchButton = () => {
-  // const [theme, setTheme] = useState(null);
-  // const [check, setCheck] = useState(false);
   const { dark, toggleDark } = useContext(StateContext);
 
-  // const isDarkMode = theme === 'dark'
-
-  // useEffect(() => {
-  //   setTheme(window.__theme);
-  //   window.__onThemeChange = () => setTheme(window.__theme)
-  // }, [])
-
-  // useEffect(() => {
-  //   setCheck(isDarkMode ? true : false)
-  // }, [theme])
-
-  // function handleTheme() {
-  //   window.__setPreferredTheme(isDarkMode ? 'light' : 'dark');
-  // }
   return(
     <Switch
       offColor='#3b3b3b'
@@ -50,5 +34,6 @@ const SwitchButton = () => {
       onChange={toggleDark}
     />
   )
-}
+};
+
 export default SwitchButton

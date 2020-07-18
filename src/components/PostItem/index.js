@@ -13,7 +13,7 @@ import {
 
 const PostItem = ({ slug, tag, date, timeToRead, title, description, color}) => {
   return (
-    <PostItemLink to={slug}>
+    <PostItemLink to={slug} cover direction="left" bg="#f7f7f7" duration={1}>
       <Container>
         <PostItemTag color={color}>{tag}</PostItemTag>
 

@@ -1,17 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
+import AniLink from "gatsby-plugin-transition-link/AniLink";
 
 import { Container } from './styles';
 
 function Pagination({ isFirst, isLast, currentPage, numPages, prevPage, nextPage }) {
   return (
     <Container>
-      {!isFirst && <Link to={prevPage}>← Página anterior</Link>}
+      {!isFirst && <AniLink cover direction="left" bg="#f7f7f7" duration={1} to={prevPage}>← Página anterior</AniLink>}
       
       <p>{currentPage} de {numPages}</p>
 
-      {!isLast && <Link to={nextPage}> Página anterior →</Link>}
+      {!isLast && <AniLink cover direction="right" bg="#f7f7f7" duration={1} to={nextPage}> Página anterior →</AniLink>}
     </Container>
   )
 }

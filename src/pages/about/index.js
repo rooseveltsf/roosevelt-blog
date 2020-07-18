@@ -1,10 +1,8 @@
 import React from 'react';
 
 import Layout from "../../components/Layout";
-import InfoUser from '../../components/InfoUser'
-import Footer from '../../components/Footer'
+import Footer from '../../components/Footer';
 
-import Apresentation from '../../components/Apresentation'
 import {
   Header,
   Line,

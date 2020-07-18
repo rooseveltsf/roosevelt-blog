@@ -1,25 +1,54 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 import SwitchButton from "../SwitchButton";
-import { Container, Title, Menu, LinkPage } from './styles';
+import { Container, MenuContainer, Title, Menu, LinkPage } from './styles';
 
-const Header = ({ dark, onClick }) => (
-  <Container>
-    <div>
-      <Title>me.</Title>
+const Links = [
+  {
+    name: 'Home',
+    path: '/'
+  },
+  {
+    name: 'Projetos',
+    path: '/projects/'
+  },
+  {
+    name: 'Sobre',
+    path: '/about/'
+  }
+]
 
-      <Menu>
-        <ul>
-          <li><LinkPage to="/">Home</LinkPage></li>
-          <li><LinkPage to="/projects/">Projetos</LinkPage></li>
-          <li><LinkPage to="/about">Sobre</LinkPage></li>
-        </ul>
-      </Menu>
-    </div>
+const Header = ({ dark }) => {
 
-    <SwitchButton dark={dark} onClick={onClick} />
-  </Container>
-)
+  const isDark = dark ? '#1b2027' : '#f7f7f7'
 
+  return (
+    <Container>
+      <MenuContainer>
+        <Title>me.</Title>
+
+        <Menu>
+          <ul>
+            {Links.map(link => (
+              <li key={link.name}>
+                <LinkPage
+                  cover
+                  direction="right"
+                  duration={1}
+                  bg={isDark}
+                  to={link.path}
+                >
+                  {link.name}
+                </LinkPage>
+              </li>
+            ))}
+          </ul>
+        </Menu>
+      </MenuContainer>
+
+      <SwitchButton />
+    </Container>
+  )
+}
 
 export default Header;

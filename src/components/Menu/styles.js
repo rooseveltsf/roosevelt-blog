@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import media from 'styled-media-query';
 
 export const Container = styled.div`
   width: 4rem;
@@ -12,6 +13,7 @@ export const Container = styled.div`
   justify-content: center;
   border-left: 1px solid var(--borderHeader);
   background: var(--backgroundHeader);
+  transition: background 0.5s;
 
   ul {
     list-style: none;
@@ -29,4 +31,23 @@ export const Container = styled.div`
       }
     }
   }
+
+  ${media.lessThan('medium')`
+    width: 100%;
+    height: 4rem;
+    position: fixed;
+    bottom: 0;
+
+    ul {
+      flex-direction: row;
+      justify-content: space-around;
+      /* background: darkblue; */
+      width: 100%;
+
+      li {
+        writing-mode: horizontal-tb;
+        /* margin: 0 54px; */
+      }
+    }
+  `}
 `;

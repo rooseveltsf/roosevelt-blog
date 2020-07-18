@@ -4,7 +4,6 @@ import { graphql } from 'gatsby';
 import { PostHeader, PostHeaderBorder, PostDate, PostTitle, PostDescription, MainContent } from "../../components/Post/styles";
 import Layout from '../../components/Layout';
 import RecommendedPosts from '../../components/RecommendedPosts'
-import Footer from '../../components/Footer';
 
 const Post = ({ data, pageContext }) => {
   const { frontmatter: { title, description, date, background }, html, timeToRead} = data.markdownRemark
@@ -22,7 +21,6 @@ const Post = ({ data, pageContext }) => {
         <div dangerouslySetInnerHTML={{__html: html}}></div>
       </MainContent>
       <RecommendedPosts color={background} next={nextPost} previous={previousPost} />
-      {/* <Footer /> */}
     </Layout>
   )
 }
