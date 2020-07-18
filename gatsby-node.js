@@ -39,6 +39,7 @@ exports.createPages = ({ graphql, actions }) => {
               description
               tag
               title
+              image
             }
             timeToRead
             fields {

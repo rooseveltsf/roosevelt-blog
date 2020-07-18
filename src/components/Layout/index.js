@@ -12,12 +12,12 @@ import Menu from '../Menu';
 import SEO from '../seo'
 import GlobalStyles from '../../styles/Global';
 
-const Layout = ({ children, title }) => {
+const Layout = ({ children, title, description, image }) => {
   const { dark } = useContext(StateContext);
 
   return (
     <Container>
-      <SEO title={title} />
+      <SEO title={title} description={description || ''} image={image || ''} />
       <GlobalStyles dark={dark} />
 
       <TransitionPortal level="top">

@@ -4,6 +4,7 @@ module.exports = {
     position: `Desenvolvedor full-stack`,
     description: `O portfolio de um desenvolvedor full-stack`,
     author: `Roosevelt de Souza`,
+    siteUrl: `https://rooseveltsouza.com`
   },
   plugins: [
     `gatsby-plugin-styled-components`,
@@ -57,11 +58,11 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Meu-Portfólio`,
-        short_name: `portfolio`,
+        name: `Roosevelt de Souza`,
+        short_name: `Roosevelt`,
         start_url: `/`,
-        background_color: `#3B3B3B`,
-        theme_color: `#3B93FB`,
+        background_color: `#1b2027`,
+        theme_color: `#1b2027`,
         display: `minimal-ui`,
         icon: `src/images/Icon.png`, // This path is relative to the root of the site.
       },
@@ -88,6 +89,7 @@ module.exports = {
         ],
       },
     },
-    // `gatsby-plugin-offline`,
+    `gatsby-plugin-sitemap`,
+    `gatsby-plugin-offline`,
   ],
 }

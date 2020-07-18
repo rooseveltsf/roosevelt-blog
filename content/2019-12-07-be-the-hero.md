@@ -4,6 +4,7 @@ title: Be The Hero
 description: Aqui está a descrição do Be The Hero.
 tag: BTH
 background: '#3B93FB'
+image: '/assets/image/signin.png'
 ---
 
 ## Tecnologias
