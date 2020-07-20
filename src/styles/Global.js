@@ -70,6 +70,8 @@ const GlobalStyles = createGlobalStyle`
     --border: ${({ dark }) => dark ? '#383d45' : '#D1CCCC'};
     --background: ${({ dark }) => dark ? '#1b2027' : '#f7f7f7' };
 
+    --burguer: ${({ dark }) => dark ? '#f7f7f7' : '#1b2027' };
+
     --backgroundHeader: ${({ dark }) => dark ? '#222831' : '#eee'};
     --borderHeader: ${({ dark }) => dark ? '#383d45' : '#DEDEDE'};
   }

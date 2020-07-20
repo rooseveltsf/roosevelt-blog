@@ -68,6 +68,17 @@ module.exports = {
       },
     },
     {
+      resolve: "gatsby-plugin-breakpoints",
+      options: {
+          queries: {
+            xs: '(max-width: 450px)',
+            sm: '(max-width: 550px)',
+            md: '(max-width: 768px)',
+            l: '(max-width: 1170px)',
+          },
+      },
+    },
+    {
       resolve: `gatsby-plugin-page-creator`,
       options: {
         path: `${__dirname}/src/pages`,

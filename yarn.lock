@@ -6098,6 +6098,13 @@ gatsby-page-utils@^0.2.15:
     lodash "^4.17.15"
     micromatch "^3.1.10"
 
+gatsby-plugin-breakpoints@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-breakpoints/-/gatsby-plugin-breakpoints-1.2.0.tgz#933c764d8e9ec85ac8514a94385f2715725bf125"
+  integrity sha512-E9snE3F2PaFRLJEeQXzWX/BXVO+ov2ZVQquPNPTDtSqLCG7F33nE+lnU6uWtTQJNjIfDebQpxXDOsYK7BPdmlA==
+  dependencies:
+    "@babel/runtime" "^7.10.3"
+
 gatsby-plugin-manifest@^2.4.14:
   version "2.4.17"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-manifest/-/gatsby-plugin-manifest-2.4.17.tgz#22b7dce25edf03338e8954ad847cd94adeaec31a"

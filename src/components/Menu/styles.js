@@ -50,4 +50,8 @@ export const Container = styled.div`
       }
     }
   `}
+
+  ${media.lessThan('small')`
+    min-width: 360px;
+  `}
 `;

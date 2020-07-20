@@ -33,6 +33,14 @@ export const ContainerTitle = styled.div`
       font-size: 5rem;
     }
   `}
+
+  ${media.lessThan('small')`
+    height: 7.5rem;
+
+    h2 {
+      font-size: 4rem;
+    }
+  `}
 `;
 
 export const ContainerData = styled.div`
@@ -61,5 +69,19 @@ export const ContainerData = styled.div`
       color: var(--text);
     }
   }
+  ${media.lessThan('small')`
+    height: 3.250rem;
+    
+    div{
+      height: 100%;
 
+      h3 {
+        font-size: 1.5rem;
+      }
+
+      p {
+        font-size: 1.2rem;
+      }
+    }
+  `}
 `;

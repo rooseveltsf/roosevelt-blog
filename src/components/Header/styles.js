@@ -23,6 +23,10 @@ export const Container = styled.aside`
     align-items: center;
     border-right: 0;
     border-bottom: 1px solid var(--borderHeader);
+    /* background: red; */
+  `}
+  ${media.lessThan('small')`
+    min-width: 360px;
   `}
 
 `;
@@ -32,20 +36,27 @@ export const MenuContainer = styled.div`
   flex-direction: column;
   flex: 1;
 
+
   ${media.lessThan('medium')`
     flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    /* padding-top: 20px; */
+    height: 5rem;
   `}
 `;
 
 export const Title = styled.h1`
-  font-size: 64px;
+  font-size: 4.5rem;
   line-height: 0;
   margin-bottom: 100px;
   font-family: Ubuntu;
   color: var(--title);
 
   ${media.lessThan('medium')`
-    margin: 0;
+    margin-bottom: 11px;
+    font-size: 3rem;
+    /* background: red; */
   `}
 `
 

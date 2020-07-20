@@ -4,6 +4,7 @@ import media from 'styled-media-query';
 export const Container = styled.section`
   display: flex;
   min-height: 100vh;
+  min-width: 360px;
 
   ${media.lessThan("medium")`
     flex-direction: column;
