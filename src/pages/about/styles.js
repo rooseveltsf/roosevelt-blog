@@ -21,7 +21,7 @@ export const Container = styled.section`
 
   ${media.lessThan('medium')`
     margin: 0 1rem;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: repeat(3, minmax(100px, auto));
     grid-template-columns: 1fr;
     grid-template-areas: 
       'info'

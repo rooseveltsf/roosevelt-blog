@@ -4,7 +4,7 @@ import Layout from "../../components/Layout";
 import Footer from '../../components/Footer';
 import Apresentation from '../../components/Apresentation';
 
-import { Infos, ListTechs } from '../../utils/infoUser';
+import { InfoApresentation, Infos, ListTechs, Contacts, LinksSocials, Formations } from '../../utils/infoUser';
 
 import {
   Line,
@@ -22,13 +22,12 @@ import {
 import Avatar from '../../components/Avatar';
 
 const AboutPage = () => {
-  // const breakpoints = useBreakpoint();
   
   return (
     <Layout title="Sobre">
       <Apresentation
-        title='Sobre'
-        description='Conheçam um pouco o dono do blog'
+        title={InfoApresentation.title}
+        description={InfoApresentation.description}
       />
       <Container>
         <InfoContainer>
@@ -41,40 +40,40 @@ const AboutPage = () => {
             </div>
           </Info>
 
-          <h3>Formação</h3>
+          <h3>{Formations.title}</h3>
           <Line />
 
           <Formation>
-            <p><span>Instituição: </span>Centro Universitário de João Pessoa - UNIPÊ</p>
-            <p><span>Escolaridade: </span>Curso Superior(Cursando)</p>
-            <p><span>Curso: </span>Ciência da Computação</p>
+            <p><span>Instituição: </span>{Formations.instituicao}</p>
+            <p><span>Escolaridade: </span>{Formations.escolaridade}</p>
+            <p><span>Curso: </span>{Formations.curso}</p>
           </Formation>
         </InfoContainer>
 
         <ContactsContainer>
-          <h3>Contato</h3>
-          <p>Entre em contato por meio desses contatos</p>
+          <h3>{Contacts.title}</h3>
+          <p>{Contacts.description}</p>
           <Line />
           <Contact>
-            <p><span>Tel: </span>(83) 9 9803-9933</p>
-            <p><span>E-mail: </span>rooseveltsouzav12@gmail.com</p>
+            <p><span>Tel: </span>{Contacts.fone}</p>
+            <p><span>E-mail: </span>{Contacts.email}</p>
           </Contact>
 
-          <h3>Redes sociais</h3>
+          <h3>{LinksSocials.title}</h3>
           <Line />
           <Socials>
-            <a href="/">Instagram</a>
-            <a href="/">Github</a>
-            <a href="/">Linkedin</a>
+            {LinksSocials.list.map(link => 
+              <a key={link.name} rel="noreferrer" target="_blank" href={link.url}>{link.name}</a>
+            )}
           </Socials>
         </ContactsContainer>
 
         <TechsContainer>
-          <h3>Tecnologias</h3>
+          <h3>{ListTechs.title}</h3>
           <Line />
 
-          {ListTechs.map(tech => (
-            <li>
+          {ListTechs.list.map(tech => (
+            <li key={tech.name}>
               <strong>{tech.name}</strong>
               <p>{tech.description}</p>
             </li>

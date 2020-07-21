@@ -9,11 +9,6 @@ export const Container = styled.section`
   border-top: 1px solid var(--border);
   color: var(--text);
 
-  ${media.lessThan("small")`
-    font-size: .8rem;
-    padding: 1rem;
-  `}
-
   a {
     color: var(--text);
     text-decoration: none;
@@ -24,4 +19,9 @@ export const Container = styled.section`
       color: #F2A365;
     }
   }
+
+  ${media.lessThan("small")`
+    font-size: .9rem;
+    padding: 1rem;
+  `}
 `;
