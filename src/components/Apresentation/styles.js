@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import media from 'styled-media-query';
 
 export const Header = styled.div`
   padding: 3rem 1.8rem 1rem 1.8rem;
@@ -14,6 +15,14 @@ export const Header = styled.div`
     font-size: 1.5rem;
     color: var(--text);
   }
+
+  ${media.lessThan('small')`
+    padding: 2rem 1rem;
+
+    p {
+      font-size: 1.3rem;
+    }
+  `}
 `;
 
 export const Line = styled.div`
@@ -21,5 +30,4 @@ export const Line = styled.div`
   width: 100%;
   background: linear-gradient(to right, var(--border), var(--background));
   margin-top: 8px;
-  /* background: #707070; */
 `;

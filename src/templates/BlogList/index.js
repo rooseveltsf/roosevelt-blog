@@ -2,7 +2,9 @@ import React from 'react';
 import { graphql } from 'gatsby';
 
 import Layout from '../../components/Layout';
-import { Header, Line } from './styles';
+import Apresentation from '../../components/Apresentation';
+
+import dataPage from './dataPageProjects';
 
 import PostItem from '../../components/PostItem';
 import Pagination from '../../components/Pagination';
@@ -19,11 +21,10 @@ const BlogPage = props => {
 
   return (
     <Layout title='Projetos'>
-      <Header>
-        <h2>Projetos</h2>
-        <p>Segue a lista de alguns projetos idealizado por mim, com detalhes sobre eles.</p>
-        <Line />
-      </Header>
+      <Apresentation
+        title={dataPage.title}
+        description={dataPage.description}
+      />
       {edges.map(post => (
         <PostItem
           key={post.node.frontmatter.title}

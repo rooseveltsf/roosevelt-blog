@@ -32,7 +32,7 @@ export const Container = styled.div`
     }
   }
 
-  ${media.lessThan('medium')`
+  ${media.lessThan('large')`
     width: 100%;
     height: 4rem;
     position: fixed;

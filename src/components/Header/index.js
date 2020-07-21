@@ -1,24 +1,10 @@
 import React from 'react';
 import { useBreakpoint } from 'gatsby-plugin-breakpoints';
 
+import Links from '../../utils/LinksNavigation';
 import SwitchButton from "../SwitchButton";
-import Burguer from '../Burguer';
+import MenuBurguer from '../MenuBurguer';
 import { Container, MenuContainer, Title, Menu, LinkPage } from './styles';
-
-const Links = [
-  {
-    name: 'Home',
-    path: '/'
-  },
-  {
-    name: 'Projetos',
-    path: '/projects/'
-  },
-  {
-    name: 'Sobre',
-    path: '/about/'
-  }
-]
 
 const Header = ({ dark }) => {
   const breakpoint = useBreakpoint();
@@ -31,8 +17,8 @@ const Header = ({ dark }) => {
         <MenuContainer>
           <Title>me.</Title>
 
+          <MenuBurguer dark={dark} />
 
-          <Burguer/>
         </MenuContainer>
       ) : (
         <>

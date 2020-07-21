@@ -6,6 +6,7 @@ export const Container = styled.section`
   border-top: 1px solid var(--border);
   /* background: #192734; */
   display: flex;
+
 `
 
 export const RecommendedLink = styled(AniLink)`

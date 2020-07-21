@@ -6,7 +6,7 @@ export const Container = styled.section`
   min-height: 100vh;
   min-width: 360px;
 
-  ${media.lessThan("medium")`
+  ${media.lessThan("large")`
     flex-direction: column;
   `}
 `;
@@ -19,7 +19,7 @@ export const Main = styled.main`
   flex-direction: column;
   flex: 1;
 
-  ${media.lessThan("medium")`
+  ${media.lessThan("large")`
     padding: 5rem 0 4rem 0;
     /* background: purple; */
   `}

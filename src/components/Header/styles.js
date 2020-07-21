@@ -14,7 +14,7 @@ export const Container = styled.aside`
   position: fixed;
   transition: background 0.5s;
 
-  ${media.lessThan('medium')`
+  ${media.lessThan('large')`
     width: 100%;
     height: 5rem;
     position: fixed;
@@ -23,8 +23,8 @@ export const Container = styled.aside`
     align-items: center;
     border-right: 0;
     border-bottom: 1px solid var(--borderHeader);
-    /* background: red; */
   `}
+
   ${media.lessThan('small')`
     min-width: 360px;
   `}
@@ -36,13 +36,14 @@ export const MenuContainer = styled.div`
   flex-direction: column;
   flex: 1;
 
-
-  ${media.lessThan('medium')`
+  ${media.lessThan('large')`
+    display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     /* padding-top: 20px; */
-    height: 5rem;
+    height: inherit;
+    width: inherit;
   `}
 `;
 
@@ -53,10 +54,9 @@ export const Title = styled.h1`
   font-family: Ubuntu;
   color: var(--title);
 
-  ${media.lessThan('medium')`
+  ${media.lessThan('large')`
     margin-bottom: 11px;
     font-size: 3rem;
-    /* background: red; */
   `}
 `
 
@@ -71,7 +71,7 @@ export const Menu = styled.nav`
     }
   }
 
-  ${media.lessThan('medium')`
+  ${media.lessThan('large')`
     ul {
       flex-direction: row;
       align-items: center;

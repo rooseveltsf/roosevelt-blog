@@ -10,6 +10,10 @@ export const Container = styled.div`
   justify-content: center;
 
   transition: background 0.5s;
+
+  ${media.lessThan('small')`
+    padding: 32px 0;
+  `}
 `;
 
 export const ContainerTitle = styled.div`
@@ -25,6 +29,14 @@ export const ContainerTitle = styled.div`
     
     text-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
   }
+
+  ${media.lessThan('large')`
+    height: 11rem;
+
+    h2 {
+      font-size: 6rem;
+    }
+  `}
 
   ${media.lessThan('medium')`
     height: 10rem;

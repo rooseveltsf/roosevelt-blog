@@ -1,8 +1,14 @@
 import styled from "styled-components"
+import media from "styled-media-query"
 
 export const PostHeader = styled.header`
   color: var(--title);
   padding: 5rem 2rem 0;
+
+  ${media.lessThan("medium")`
+    padding: 3rem 0 0;
+    max-width: 100%;
+  `}
 `
 export const PostHeaderBorder = styled.div`
   background: ${({ color }) =>
@@ -12,6 +18,7 @@ export const PostHeaderBorder = styled.div`
   height: 2px;
   width: 100%;
   margin: 8px 0 32px 0;
+
 `
 
 export const PostTitle = styled.h1`
@@ -19,6 +26,12 @@ export const PostTitle = styled.h1`
   font-weight: 700;
   /* padding: 0 1.4rem; */
   margin: 1rem auto;
+
+  ${media.lessThan("medium")`
+    font-size: 2.8rem;
+    line-height: 1.1;
+    padding: 0 1rem;
+  `}
 `
 
 export const PostDescription = styled.h2`
@@ -26,6 +39,12 @@ export const PostDescription = styled.h2`
   font-weight: 300;
   /* padding: 0 1.4rem; */
   color: var(--text);
+
+  ${media.lessThan("medium")`
+    font-size: 1.6rem;
+    line-height: 1.3;
+    padding: 0 1rem;
+  `}
 `
 
 export const PostDate = styled.p`
@@ -33,6 +52,10 @@ export const PostDate = styled.p`
   font-weight: 300;
   /* padding: 0 1.4rem; */
   color: var(--textDescription);
+
+  ${media.lessThan("medium")`
+    padding: 0 1rem;
+  `}
 `
 
 export const MainContent = styled.section`
@@ -42,6 +65,12 @@ export const MainContent = styled.section`
   margin: 8px 0 32px 0;
   text-align: justify;
   padding: 0 1.5rem;
+
+  ${media.lessThan("medium")`
+    padding: 2rem 0;
+    max-width: 100%;
+  `}
+
   p,
   h1,
   h2,
@@ -58,6 +87,11 @@ export const MainContent = styled.section`
     line-height: 1.7;
     letter-spacing: 0.069rem;
     padding: 0 1.4rem;
+
+    ${media.lessThan("medium")`
+      padding: 0 1rem;
+      word-break: break-word;
+    `}
   }
   p {
     margin: 0 auto 1.6rem;
@@ -96,6 +130,10 @@ export const MainContent = styled.section`
   iframe {
     padding: 0 1.6rem 1.6rem;
     width: 100%;
+
+    ${media.lessThan("medium")`
+      padding: 0 1rem;
+    `}
   }
   blockquote {
     color: #333;
@@ -123,12 +161,25 @@ export const MainContent = styled.section`
   }
   h1 {
     font-size: 2.8rem;
+
+    ${media.lessThan("medium")`
+      font-size: 1.875rem;
+    `}
   }
   h2 {
     font-size: 2.1rem;
+
+    ${media.lessThan("medium")`
+      font-size: 1.125rem;
+    `}
+
   }
   h3 {
     font-size: 1.6rem;
+
+    ${media.lessThan("medium")`
+      font-size: 1.125rem;
+    `}
   }
   h4 {
     font-size: 1.4rem;
@@ -156,6 +207,10 @@ export const MainContent = styled.section`
   }
   .gatsby-highlight {
     padding: 0 1.6rem 1.6rem;
+
+    ${media.lessThan("medium")`
+      padding: 0;
+    `}
   }
   .instagram-media {
     margin: 1rem auto !important;

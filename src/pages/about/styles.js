@@ -1,21 +1,5 @@
 import styled from 'styled-components';
-
-
-export const Header = styled.div`
-  padding: 3rem 1.8rem 1rem 1.8rem;
-
-  h2 {
-    font-size: 2rem;
-    font-weight: bold;
-    margin-bottom: 16px;
-    color: var(--title);
-  }
-
-  p {
-    font-size: 1.5rem;
-    color: var(--text);
-  }
-`;
+import media from 'styled-media-query';
 
 export const Line = styled.div`
   height: 1px;
@@ -25,17 +9,47 @@ export const Line = styled.div`
 `;
 
 export const Container = styled.section`
-  /* height: 100%; */
-  display: flex;
-  justify-content: space-between;
+  display: grid;
   margin: 0 1.8rem;
-  /* background: darkmagenta; */
   color: var(--text);
   height: 100%;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: 
+    'info contact'
+    'tech tech';
+
+  ${media.lessThan('medium')`
+    margin: 0 1rem;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+      'info'
+      'tech'
+      'contact';
+  `}
 `;
 
-export const SubContainer = styled.div`
-  width: 55%;
+export const InfoContainer = styled.div`
+  grid-area: info;
+
+  div:nth-child(2) {
+    margin-left: 16px;
+
+    p {
+      font-weight: 500;
+      margin: 10px 0;
+      font-size: 16px;
+
+      span {
+        font-weight: bold;
+      }
+    }
+
+    ${media.lessThan('medium')`
+      margin: 0;
+    `}
+  }
 
   h3 {
     font-size: 2rem;
@@ -43,16 +57,26 @@ export const SubContainer = styled.div`
     color: var(--text);
     margin-top: 32px;
   }
+
+  ${media.lessThan('medium')`
+    width: 100%;
+  `}
 `;
 
-export const InfoContainer = styled.div`
+export const Info = styled.div`
   display: flex;
-  align-items: center;
+  /* flex-direction: column; */
+  /* align-items: center; */
   width: 100%;
+
+  ${media.lessThan('medium')`
+    flex-direction: column;
+  `}
 `;
 
 export const ContainerImg = styled.div`
   width: 10rem;
+  align-self: center;
 `;
 
 export const Forms = styled.div`
@@ -81,12 +105,22 @@ export const Formation = styled.div`
   }
 `;
 
-export const Techs = styled.ul`
+export const TechsContainer = styled.ul`
+  grid-area: tech;
+
   display: flex;
-  margin: 0 1.8rem;
+  flex-wrap: wrap;
+
+  h3 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--text);
+    margin-top: 32px;
+  }
 
   li {
     margin: 16px 0;
+    width: 50%;
     /* background: red; */
 
     strong {
@@ -101,11 +135,20 @@ export const Techs = styled.ul`
       width: 90%;
     }
   }
+
+  ${media.lessThan('medium')`
+    flex-direction: column;
+    flex-wrap: nowrap;
+
+    li {
+      width: 100%;
+    }
+  `}
 `;
 
-export const ContactContainer = styled.div`
-  /* background: blue; */
-  width: 45%;
+export const ContactsContainer = styled.div`
+  grid-area: contact;
+
   padding-left: 2rem;
 
   h3 {
@@ -113,6 +156,11 @@ export const ContactContainer = styled.div`
     margin-top: 32px;
     margin-bottom: 8px;
   }
+
+  ${media.lessThan('medium')`
+    width: 100%;
+    padding: 0;
+  `}
 
 `;
 
@@ -138,4 +186,15 @@ export const Socials = styled.div`
     margin: 8px 0;
     font-size: 1.1rem;
   }
+
+  ${media.lessThan('medium')`
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    a {
+      width: 50%;
+      /* margin: 8px 0;
+      font-size: 1.1rem; */
+    }
+  `}
 `;

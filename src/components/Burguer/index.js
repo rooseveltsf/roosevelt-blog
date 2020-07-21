@@ -2,12 +2,13 @@ import React from 'react';
 
 import { StyledBurger } from './styles';
 
-const Burguer = () => {
+const Burguer = ({ open, click }) => {
+
   return (
-    <StyledBurger>
-      <div />
-      <div />
-      <div />
+    <StyledBurger open={open} onClick={click}>
+      <span />
+      <span />
+      <span />
     </StyledBurger>
   )
 }

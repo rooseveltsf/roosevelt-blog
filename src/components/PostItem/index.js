@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import PropsTypes from 'prop-types';
+import { StateContext } from "../../context/StateContext";
 
 import {
   PostItemLink,
@@ -11,9 +12,13 @@ import {
   PostItemDescription
 } from './styles';
 
-const PostItem = ({ slug, tag, date, timeToRead, title, description, color}) => {
+const PostItem = ({ slug, tag, date, timeToRead, title, description, color }) => {
+  const { dark } = useContext(StateContext);
+
+  const isDark = dark ? '#1b2027' : '#f7f7f7';
+
   return (
-    <PostItemLink to={slug} cover direction="left" bg="#f7f7f7" duration={1}>
+    <PostItemLink to={slug} cover direction="left" bg={isDark} duration={1}>
       <Container>
         <PostItemTag color={color}>{tag}</PostItemTag>
 
